@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/snakeImage"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:src="@drawable/tictac"
+         />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:id="@+id/mai"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:fontFamily="serif-monospace"
+            android:gravity="center"
+            android:text="Tic Tac Toe"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/playerOneName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/changa_one"
+            android:hint="Player 1 name"
+            android:imeActionLabel="NEXT"
+            android:imeOptions="actionNext"
+            android:inputType="textCapSentences|textPersonName"
+            android:textColor="@android:color/black" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:weightSum="3">
+
+
+            <CheckBox
+                android:id="@+id/player1x"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/changa_one"
+                android:gravity="center_vertical"
+                android:text=" X "
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/player1o"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/changa_one"
+                android:gravity="center_vertical"
+                android:text=" O "
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/playerTwoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/changa_one"
+            android:hint="Player 2 Name"
+            android:imeActionLabel="DONE"
+            android:imeOptions="actionDone"
+            android:inputType="textCapSentences|textPersonName" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:weightSum="3">
+
+
+            <CheckBox
+                android:id="@+id/player2x"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/changa_one"
+                android:gravity="center_vertical"
+                android:text=" X "
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/player2o"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:fontFamily="@font/changa_one"
+                android:gravity="center_vertical"
+                android:text=" O "
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/splayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/changa_one"
+                    android:text="Single player"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/tplayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/changa_one"
+                    android:text="Two player"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/difficulty"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:hint="difficulty">
+
+            </Spinner>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/snakeImage1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/mai"
+        android:layout_centerInParent="true"
+        android:src="@drawable/pls1"
+        />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round"
+        android:onClick="startgame"
+        android:layout_marginBottom="15dp"
+        android:text="start"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>
