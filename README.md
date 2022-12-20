@@ -1,3 +1,3 @@
 # TicTacToe1
-This is an app containing the nostalgic games that we all used to love in our childhood.
+This is an gaming app containing the nostalgic games that we all used to love in our childhood.
 Lets let our inner child relive the memories lost in our hearts that it still cherishes ...
